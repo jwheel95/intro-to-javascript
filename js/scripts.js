@@ -1,3 +1,11 @@
-console.log("I'm really looking forward to expanding my horizons in tech and programming specifically. My goal is to get more involved with the Bitwise community and launch a career in programming/development.");
+// alert('Danger Will Robinson!!!');
 
-console.log("I have a background in music as a classical bassoonist and a rock guitarist/songwriter. Other than music and programming, some of my interests are hiking, cooking, gaming, and craft beer.")
+// const response = confirm('Are you sure?');
+// console.log(response);
+
+// const favMovie = prompt('What is your favorite movie?');
+// console.log(favMovie);
+
+const favNum = prompt('What is your favorite number?');
+const realNum = parseInt(favNum);
+console.log(favNum);
