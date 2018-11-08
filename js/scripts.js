@@ -1,11 +1,12 @@
-// alert('Danger Will Robinson!!!');
+const firstName = prompt('What is your first name?');
+const lastName = prompt('What is your last name?');
 
-// const response = confirm('Are you sure?');
-// console.log(response);
+console.log(firstName);
 
-// const favMovie = prompt('What is your favorite movie?');
-// console.log(favMovie);
+alert(lastName);
 
-const favNum = prompt('What is your favorite number?');
-const realNum = parseInt(favNum);
-console.log(favNum);
+const birthday = new Date(prompt('When were you born? (day, month, and year)'));
+
+confirm(`Is this your birthday? ${birthday}`);
+
+alert(birthday);
