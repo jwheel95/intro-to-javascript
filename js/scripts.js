@@ -1,6 +1,6 @@
 const name = prompt("Hello! What is your name?");
 
-const favColor = prompt(`What is your favorite color, ${name}? Please type red, orange, yellow, green, blue, pink, purple, black, white, or grey.`);
+const favColor = prompt(`What is your favorite color, ${name}? Please type red, orange, yellow, green, blue, pink, purple, black, white, or grey.`).toLowerCase();
 
 switch (favColor) {
   case 'red':
