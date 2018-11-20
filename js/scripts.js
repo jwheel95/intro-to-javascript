@@ -1,34 +1,103 @@
-const chore1 = [prompt("What is one chore you need to do this weekend?")];
-const chore2 = [prompt("What is a second chore you need to do this weekend?")];
-const chore3 = [prompt("What is a third chore you need to do this weekend?")];
+// const leastFavoriteTeams = ['Yankees', 'Real Madrid', 'Patriots', 'Alabama'];
+//
+// leastFavoriteTeams.unshift('Lakers');
+// leastFavoriteTeams.push('Ohio State');
+// leastFavoriteTeams.splice(leastFavoriteTeams.indexOf('Patriots'), 1);
+// leastFavoriteTeams.unshift('Patriots');
+// console.log(leastFavoriteTeams);
+/**
+ * 1) Add 'Lakers' to the front of the leastFavoriteTeams array
+ * 2) Add 'Ohio State' to the back of the leastFavoriteTeams array
+ * 3) Remove 'Patriots' from the leastFavoriteTeams array
+ * 4) Add 'Patriots' back to the beginning of the leastFavoriteTeams array
+ * 5) Console log the array to see if you did everything right
+ *
+ * -> ['Patriots', 'Lakers', 'Yankees', 'Real Madrid', 'Alabama', 'Ohio State']
+ */
 
-const weekend = [chore1, chore2, chore3];
+// const heroes = ['Drow', 'Phantom Lancer', 'Invoker'];
+//
+// heroes.reverse();
+// heroes.splice(1, 0, 'Ember Spirit');
+// heroes.pop();
+// heroes.shift();
+// heroes.unshift('Shadow Fiend');
+// console.log(heroes);
+/**
+ * 1) Reverse the heroes array
+ * 2) Add 'Ember Spirit' after the first index of the heroes array
+ * 3) Remove the last member of the heroes array
+ * 4) Remove the first item of the heroes array
+ * 5) Add 'Shadow Fiend' to the beginning of the heroes array
+ * 6) Console log the array to see if you did everything right
+ *
+ * -> ['Shadow Fiend', 'Phantom Lancer', 'Ember Spirit']
+ */
 
-console.log(weekend);
+// const name = 'Joe';
+// console.log(name);
+//
+// const logSomething = function() {
+//   console.log(name);
+// };
+//
+// logSomething();
 
-for (let i = 0; i < weekend.length; i++) {
-   weekend[i].push(+prompt(`'${weekend[i][0]}': How many hours will it take to complete this?`));
+// function add(a, b) {
+//   console.log(a + b);
+// }
+//
+// function subtract(a, b) {
+//   console.log(a - b);
+// }
+//
+// add(2, 89);
+// subtract(99, 54);
 
- }
+// const add = (a, b) => {
+//   console.log(a + b);
+// }
+//
+// add(346, 8465);
+//
+// const sayName = name => {
+//   console.log(name);
+// }
+//
+// sayName('Fido');
+//
+// const cat = 'Smokey';
+//
+// console.log(cat.substr(2));
 
- let longestItem = 0;
- let longestItemIndex = 0;
+// function calcDogYears(years) {
+//   alert(years * 7);
+// };
+//
+// calcDogYears(+prompt('How old is your dog?'));
 
-for (let i = 0; i < weekend.length; i++) {
-  if(weekend[i][1] > longestItem) {
-    longestItem = weekend[i][1];
+// function lifetimeSupply(ageNow, amountPerDay, maxAge) {
+//   alert(`You will need ${(maxAge - ageNow) * 365 * amountPerDay} to last you until you are ${maxAge}.`)
+// }
+//
+// lifetimeSupply(+prompt("How old are you now?"), +prompt("How much do you need per day?"), +prompt("How old will you live to be?"));
+
+// function baseballTeamName(hometown, weatherEvent, animalName) {
+//   alert(`Your baseball team name is: ${hometown} ${weatherEvent} ${animalName}.`);
+// }
+//
+// baseballTeamName("Sebastopol", "Hailstorm", "Wolverines");
+
+class Person {
+  constructor(name) {
+    this.name = name;
   }
 
-  console.log(longestItem);
-  console.log(longestItemIndex);
+  sayName() {
+    console.log(this.name);
+  }
 }
 
-console.log(weekend);
-console.log('Longest Item: ', weekend.splice([longestItemIndex], 1));
-console.log(weekend);
+const ben = new Person('Ben');
 
-for(let item of weekend) {
-  item.push('ez-pz');
-
-  alert(item);
-}
+console.log(ben.sayName());
