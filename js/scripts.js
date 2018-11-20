@@ -10,3 +10,7 @@ for (let i = 0; i < weekend.length; i++) {
    weekend[i].push(prompt(`'${weekend[i]}': How many hours will it take to complete this?`));
 
  }
+
+for (let i = 0; i < weekend.length; i++) {
+
+}
