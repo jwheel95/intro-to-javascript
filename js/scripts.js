@@ -1,33 +1,36 @@
-// function takehomeNumber() {
-//   const myNumber = (+prompt("Give me a number."));
-//   console.log(myNumber * myNumber);
-//
-//   if (!myNumber) {
-//     alert("Not a number!");
-//     takehomeNumber();
-//   };
-// };
-//
-// takehomeNumber();
-
-// function takehomeString () {
-//   let myString = prompt("Type a sentence.");
-//   if (!myString.endsWith('.')) {
-//     myString = myString.concat(".");
-//   }
-//   console.log(myString.charAt(0).toUpperCase() + myString.slice(1));
+// function bodyQuery(queryStr) {
+//   console.log(document.querySelector(queryStr));
+//   console.log(document.querySelectorAll(queryStr));
 // }
 //
-// takehomeString();
+// bodyQuery('body');
 
-function Palindrome() {
-  const myPalindrome = prompt("Enter a palindrome.");
-  if (myPalindrome.split("").reverse().join("") === myPalindrome) {
-    alert("That's a palindome!");
-  }
-  else {
-    alert("That's not a palindrome!");
-  }
-}
+// const header = document.querySelector('#header');
+// console.log(header);
+//
+// header.addEventListener('click', event => header.style.backgroundColor = "dodgerblue");
+//
+// document.addEventListener('keydown', event => {
+//   console.log(event);
+//   header.style.backgroundColor = 'tomato';
+//
+//   if(event.key === "Enter") {
+//     alert('You hit the enter key.');
+//   }
+// })
+// const button = document.querySelector('button');
+// const div = document.querySelector('div');
+// const hOne = document.querySelector('h1');
+//
+// button.addEventListener('click', event => alert('CLICK'));
+// div.addEventListener('mouseover', event => div.style.backgroundColor = "cyan");
+// document.addEventListener('keyup', event => hOne.style.color = "purple");
+// document.addEventListener('click', event => window.location.assign('https://google.com'));
 
-Palindrome();
+const buttons = document.querySelectorAll('button');
+
+// for(let button of buttons) {
+//   button.addEventListener('click', () => alert('clicked'));
+// }
+
+buttons.forEach(button => button.addEventListener('click', () => alert('clicked')));
