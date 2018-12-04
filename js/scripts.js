@@ -44,13 +44,38 @@
 // dog.eat();
 // console.log(dog.energy);
 
-function Person(username, password) {
-  this.username = username;
-  this.password = password;
+// function Person(username, password) {
+//   this.username = prompt('What is your username?');
+//   this.password = prompt('What is your password?');
+// }
+//
+// const user = new Person();
+// console.log(user);
+
+class Animal {
+  constructor(name, energy) {
+    this.name = name;
+    this.energy = energy;
+  }
+
+  play() {
+    this.energy -= 5;
+  }
+};
+
+class Dog extends Animal {
+  constructor(name, energy, says) {
+    super(...arguments);
+
+    this.says = says;
+  }
+
+  speak() {
+    console.log(`Dog says: ${this.says}`);
+  }
 }
 
-const username = prompt('What is your username?');
-const password = prompt('What is your password?');
-
-const user = new Person(username, password);
-console.log(user);
+const fido = new Dog('Fido', 40, 'woof');
+console.log(fido);
+fido.play();
+console.log(fido.energy);
