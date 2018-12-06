@@ -1,109 +1,26 @@
-// console.log(document.forms.loginForm.button);
+// const newPrompt = +prompt('How much time would you like to wait? (in milliseconds)');
+// console.log(newPrompt);
 //
-// const btn = document.forms.loginForm.button;
+// const timer = setTimeout(quote, newPrompt);
 //
+// const intervalPrompt = +prompt('How many times do you want the message to appear?');
+// console.log(intervalPrompt);
+// const setTime = setInterval(quote, intervalPrompt);
 //
-// btn.addEventListener('click', e => {
-//   e.preventDefault();
+// function quote () {
+//   const random = alert(Math.random().toString(27).substring(2,15));
+// }
 //
-//   let firstName = document.forms.loginForm.firstName;
-//   console.log(firstName.value);
-//   console.log("Clicked.");
-//
-//   firstName.value = '';
-// })
-// console.log(this);
-//
-// const person = {
-//   firstName: 'Ben',
-//   lastName: 'Reckas',
-//   age: 29,
-//   wife: {
-//     firstName: 'Norma',
-//     lastName: 'Reckas',
-//     age: 29,
-//
-//     howOld() {
-//       console.log(`${this.firstName} ${this.lastName} is: ${this.age} years old.`);
-//     }
-//   },
-//
-//   howOld() {
-//     console.log(`${this.firstName} ${this.lastName} is: ${this.age} years old.`);
-//   }
-// };
-//
-// person.howOld();
-// person.wife.howOld();
-//
-// const btn1 = document.querySelector('#btn1');
-// const btn2 = document.querySelector('#btn2');
-
-// btn1.addEventListener('click', logThis);
-// btn2.addEventListener('click', logThis);
-//
-// function logThis() {
-//   console.log(this);
+// function endQuote () {
+//   clearTimeout(timer);
 // }
 
-// btn1.addEventListener('click', function() {
-//   this.style.display = 'none';
-//   console.log(this);
-// });
-//
-// btn2.addEventListener('click', () => {
-//   console.log(this);
-// });
+const username = prompt('What is your username?');
 
-const buttons = document.querySelectorAll('button');
-console.log('buttons', buttons);
-
-buttons.forEach(button => button.addEventListener('click', function() {
-  this.style.display = 'none';
-}))
-
-const dog = {
-  name: 'Fido',
-  says: 'woof'
+function mySetItem() {
+  localStorage.setItem('user', username);
 }
 
-const cat = {
-  name: 'Smokey',
-  says: 'meow'
+function myGetItem() {
+  const userValue = alert(localStorage.getItem('user'));
 }
-
-const baldEagle = {
-  name: 'Freedom',
-  says: 'Baaakawwww'
-}
-
-function speak(location) {
-  alert(`${this.name} says: ${this.says}`);
-};
-
-const dogSays = speak.bind(dog);
-dogSays();
-
-const catSays = speak.bind(cat);
-catSays();
-
-const baldEagleSays = speak.bind(baldEagle);
-baldEagleSays();
-
-class Person {
-  constructor(name, age, favColor) {
-    this.name = name;
-    this.age = age;
-    this.favColor = favColor;
-  }
-
-  sayName() {
-    console.log(this.name);
-  }
-}
-
-const ben = new Person('Ben', 29, 'Pink');
-const david = new Person('David', 40, 'Blue');
-
-ben.sayName();
-david.sayName();
